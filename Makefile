@@ -1,5 +1,5 @@
 SOURCE=Dockerfile
-IMAGE=latex
+IMAGE=latex:2018
 
 FILE = main
 OLD = old
@@ -27,8 +27,7 @@ run:
 		-v ${PWD}/src:/work/latex \
 		-w /work/latex \
 		${IMAGE} \
-		sh -c 'latexmk -C main.tex && latexmk main.tex && latexmk -c main.tex'
-# sh -c "uplatex ${FILE}.tex && dvipdfmx ${FILE}.dvi"
+		sh -c "uplatex ${FILE}.tex && dvipdfmx ${FILE}.dvi"
 
 # create new container and diff.tex
 .PHONY: diff
