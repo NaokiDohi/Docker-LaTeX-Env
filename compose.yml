@@ -1,0 +1,7 @@
+services:
+  latex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - $PWD/src:/work/latex
