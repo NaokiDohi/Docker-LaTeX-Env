@@ -1,5 +1,5 @@
 SOURCE=Dockerfile
-IMAGE=latex:2018
+IMAGE=latex
 
 FILE = main
 OLD = old
